@@ -1,0 +1,52 @@
+/*
+// Author: Tiia Riikonen
+// Date: 28.3.2022
+Ohjelma, joka kysyy ensin käyttäjän sukupuolen ja tämän jälkeen iän. Lopuksi ohjelma tulostaa
+jonkin lausahduksen seuraavan ohjeen mukaisesti: Mies 0-55 vuotta: "Olet mies parhaassa iässä!",
+Mies 56-100 vuotta: "Olet viisas mies!", Nainen 0-55 vuotta: "Olet neito kauneimmillaan!", Nainen
+56-100 vuotta: "Näytät nuorelta ikäiseksesi!", Muuten "Ohjelmassa tapahtunut virhe!" 
+*/
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int ika = 0;
+	char sukupuoli;
+
+	cout << "Syota ikasi." << endl;
+	cin >> ika;
+
+	cout << "Anna sukupuolesi." << endl;
+	cin >> sukupuoli;
+
+
+	if ((sukupuoli == 'M' || sukupuoli == 'm') && ika <= 55)
+	{
+		cout << "Olet mies parhaassa iassa!" << endl;
+	}
+
+	else if ((sukupuoli == 'N' || sukupuoli == 'n') && ika <= 55)
+		cout << "Olet neito kauneimmillaan!" << endl;
+
+	else if ((sukupuoli == 'M' || sukupuoli == 'm') && ika >= 56 && ika < 100)
+	{
+		cout << "Olet viisas mies!" << endl;
+	}
+
+	else if ((sukupuoli == 'N' || sukupuoli == 'n') && ika >= 56 && ika < 100)
+	{
+		cout << "Näytät nuorelta ikäiseksesi!" << endl;
+	}
+
+
+	else
+	{
+		cout << "Ohjelmassa tapahtunut virhe!" << endl;
+	}
+
+
+	return 0;
+}
+
