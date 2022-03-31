@@ -1,0 +1,38 @@
+
+/* 
+Date: 29.3.2022
+Author: Tiia Riikonen
+Comments: Laskinohjelma, joka pyytää käyttäjältä kaksi kokonaislukua ja tämän jälkeen käyttäjä valitsee
+haluamansa matemaattisen operaation. Operaatiot ovat +, -, *, / ja %.
+*/
+
+#include <math.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int luku1, luku2;
+	char operaattori;
+	cout << "Anna kokonaisluku: ";
+	cin >> luku1;
+	cout << "Anna toinen kokonaisluku: ";
+	cin >> luku2;
+	cout << "Anna operaattori ( + - * / % ): ";
+	cin >> operaattori;
+
+	
+	switch (operaattori)
+	{
+	case '*': cout << luku1 * luku2;
+		break;
+	case '/': cout << luku1 / luku2;
+		break;
+	case '+': cout << luku1 + luku2;
+		break;
+	case '-': cout << luku1 - luku2;
+		break;
+	case '%': cout << luku1 % luku2;
+		break;
+	}
+	return 0;
+}
