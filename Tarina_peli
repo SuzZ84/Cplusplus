@@ -1,0 +1,47 @@
+/*
+Author: Tiia Riikonen
+Date 16.3.2022
+Tarinan tekemistä. Käyttäjältä kysytään adejtiivia, vaatetta tms. Ja lopussa 
+syötteet liitetään tarinaan, joka tekee hassun kertomuksen :D
+*/
+
+#include <iostream>
+#include <string>
+using namespace std; 
+
+string adjektiivi1, adjektiivi2, adjektiivi3, adjektiivi4;
+string tyton_nimi, ammatti1, vaate, harrastus1, ammatti2, pojan_nimi, naisen_nimi ;
+int main()
+{
+	cout << "Syota adjektiivi: " << endl;
+	cin >> adjektiivi1;
+	cout << "Anna tyton nimi: " << endl;
+	cin >> tyton_nimi;
+	cout << "Syota adjektiivi: " << endl;
+	cin >> adjektiivi2;
+	cout << "Anna ammatti: " << endl;
+	cin >> ammatti1;
+	cout << "Anna vaate: " << endl;
+	cin >> vaate;
+	cout << "Anna harrastus: " << endl;
+	cin >> harrastus1;
+	cout << "Anna adjektiivi: " << endl;
+	cin >> adjektiivi3;
+	cout << "Anna ammatti: " << endl;
+	cin >> ammatti2;
+	cout << "Anna pojan_nimi: " << endl;
+	cin >> pojan_nimi;
+	cout << "Anna adjektiivi: " << endl;
+	cin >> adjektiivi4;
+	cout << "Syota naisen nimi: " << endl;
+	cin >> naisen_nimi;
+
+
+
+	cout << "Olipa kerran " << adjektiivi1 << " tyttö nimeltään " << tyton_nimi << ", joka oli ammatiltaan " << adjektiivi2 << " " << ammatti1 << "."
+		" Hänen lempi vaatteensa oli " << vaate << " ja hänen mieliharrastuksensa on " << harrastus1 << ". Hän haluaisi mennä "
+		"naimisiin " << adjektiivi3 << " pojan kanssa, jonka on ammatiltaan " << ammatti2 << " ja nimeltään " << pojan_nimi << "."
+		" Mutta tytön " << adjektiivi4 << " " << naisen_nimi << " äiti ei halua tavatakaan poikaa." << endl;
+
+	return 0;
+}
