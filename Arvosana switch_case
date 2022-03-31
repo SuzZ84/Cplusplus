@@ -1,0 +1,35 @@
+/* 
+Author: Tiia Riikonen
+Date: 28.3.2022
+Comments: Ohjelma, pyytää käyttäjältä arvosanan väliltä 0 - 5 ja tulostaa sitten alla olevan tekstin annetun
+arvosanan mukaan.
+*/
+#include <iostream>
+
+void main()
+{
+	int arvosana;
+	std::cout << "Anna arvosana: ";
+	std::cin >> arvosana;
+	switch (arvosana)
+	{
+	case 5:
+		std::cout << "KIITETTAVA 5";
+		break;
+	case 4:
+		std::cout << "HYVA 4";
+		break;
+	case 3:
+		std::cout << "HYVA 3";
+		break;
+	case 2:
+		std::cout << "TYYDYTTAVA 2";
+		break;
+	case 1:
+		std::cout << "TYYDYTTAVA 1";
+		break;
+	case 0:
+		std::cout << "HYLATTY";
+		break;
+	}
+}
