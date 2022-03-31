@@ -1,0 +1,44 @@
+
+/*
+Author: Tiia Riikonen
+Date 16.3.2022
+Comments: Ohjelma, joka laskee ja tulostaa kolmen annetun liukuluvun keskiarvon, summan ja
+tulon.
+
+*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+float KeskiA(float luku1, float luku2, float luku3)
+{
+	return (luku1 * luku2 * luku3 / 3);
+}
+
+float summa(float luku1, float luku2, float luku3)
+{
+	return (luku1 + luku2 + luku3);
+}
+float tulo(float luku1, float luku2, float luku3)
+{
+	return (luku1 * luku2 * luku3);
+}
+int main()
+{
+	float luku1 = 5.5;
+	float luku2 = 2.5;
+	float luku3 = 2.5;
+	float KeskiAA = 0;
+	float tulos = 0;
+	float summaa = 0;
+
+	KeskiAA = KeskiA(luku1,luku2,luku3);
+	tulos = tulo(luku1, luku2, luku3);
+	summaa = summa(luku1, luku2, luku3);
+
+
+	cout << "Lukujen keskiarvo on " << KeskiAA << ", summa " << summaa << " ja tulo " << tulos <<endl;
+
+	return 0;
+}
