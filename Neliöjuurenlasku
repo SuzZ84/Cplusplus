@@ -1,0 +1,23 @@
+/* Date: 29.3.2022
+Author: Tiia Riikonen
+Comnents: Ohjelma, joka tulostaa kokonaisluvut 1 – 10 ja niiden neliöt.
+*/
+#include <math.h>
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	
+	int luku = 1; 
+	double juuri = sqrt(luku);   
+	while (luku < 11)  	      
+	{							
+		cout  << luku << endl;  
+		luku++;
+		cout << sqrt(juuri) << endl;
+		juuri++;
+		cout << endl;
+	}
+}
