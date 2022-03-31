@@ -1,0 +1,40 @@
+/*
+Author: Tiia Riikonen
+Date 16.3.2022
+Comments:Ohjelma, joka muuttaa Celsius-asteina annetun lämpötilan Fahrenheit- ja Kelvinasteiksi.
+*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+float Fahrenheit(float FarenheitKerroin, float Celsius)
+{
+	return (FarenheitKerroin * Celsius);
+}
+
+float Kelvin(float KelvinKerroin, float Celcius)
+{
+	return (KelvinKerroin * Celcius);
+}
+
+int main()
+{
+	float Celsius = 0;
+	float FahrenheitKerroin = 33.8;
+	float KelvinKerroin = 274.15;
+	float Kelvini = 0;
+	float Farenheitti = 0;
+
+	cout << "Anna celcius-aste: " << endl;
+	cin >> Celsius;
+
+
+	Kelvini = Kelvin(KelvinKerroin, Celsius);
+	Farenheitti = Fahrenheit(FahrenheitKerroin, Celsius);
+
+
+	cout << "Lamptila on Farenheittina: " << Farenheitti << " ja Kelvininä: " << Kelvini << endl;
+
+	return 0;
+}
