@@ -1,0 +1,37 @@
+/*
+Date: 30.3.2022
+Author: Tiia Riikonen
+Comnents: Ohjelma, joka tulostaa kokonaisluvut 1 – 10 ja niiden neliöt seuraavasti:
+
+Luku Neliöjuuri
+1   1.00
+2   1.41
+10  3.16
+*/
+
+#include <iostream>
+#include <windows.h>
+#include <math.h>
+
+#pragma execution_character_set( "utf-8" )
+
+using namespace std;
+
+int main()
+{
+    SetConsoleOutputCP(65001);
+   
+    int luku_1 = 1;
+    double juuri = 0;
+
+    cout << "Luku   " << "Neliöjuuri" << endl;
+
+    for (int i = 1; luku_1 < 11; i++)
+    {   
+        juuri = sqrt(i);
+        cout << luku_1 << "     "<< juuri << endl;
+        luku_1 += 1;
+    }
+
+    return 0;
+}
