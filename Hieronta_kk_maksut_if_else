@@ -1,0 +1,40 @@
+/*
+// Author: Tiia Riikonen
+// Date: 28.3.2022
+13. Hyvinvointikeskuksessa (kuntosali ja hieronta) on valittavana kolme pakettia A, B ja C.
+Paketin A perusmaksu on 150 eur/kuukausi ja siihen sisältyy kaksi hierontaa, 30 eur/kerta.
+Paketin B perusmaksu on 200 eur/kuukausi ja siihen sisältyy neljä hierontaa, 20 eur/kerta.
+Paketin C perusmaksu on 250 eur/kuukausi ja siihen sisältyy kuusi hierontaa, 10 eur/kerta.
+Tee ohjelma, joka kysyy paketin (syöttö: A, a tai B, b tai C, c) ja hierontakertojen määrän. Ohjelma
+tulostaa kuukausimaksun.
+*/
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char paketti;
+	int kerrat;
+
+	cout << "Valitse paketti a, b tai c: " << endl;
+	cin >> paketti;
+
+	cout << "Anna hierontakertojen maara: " << endl;
+	cin >> kerrat;
+
+	if (paketti == 'A' || paketti == 'a') 
+	{
+		cout << "Perusmaksu on 150€/kk ja siihen sisältyy 2 hierontaa, ~30€ kerta. " << "Lisähieronnat + " << (kerrat - 2) * 30 << "€ kk-maksun päälle." << endl;
+	}
+	else if (paketti == 'B' || paketti == 'b') 
+		cout << "Perusmaksu on 200€/kk ja siihen sisältyy neljä hierontaa ~20€ kerta. " << "Lisähieronnat + " << (kerrat - 4) * 20 << "€ kk-maksun päälle." << endl;
+
+	else if (paketti == 'C' || paketti == 'c') 
+	{
+		cout << "Perusmaksu on 250€/kk ja siihe sisältyy kuusi hierontaa ~10€ kerta. " << "Lisähieronnat + " << (kerrat - 6) * 10 << "€ kk-maksun päälle." << endl;
+	}
+
+	return 0;
+}
+
