@@ -1,0 +1,47 @@
+/*
+Author: Tiia Riikonen
+Date 29.3.2022
+Comments: Ohjelma, joka kysyy oppilaiden koearvosanoja (kokonaisluvut 1-5 käytössä) ja laskee
+syötettyjen arvosanojen keskiarvon. Ohjelman tulee ottaa vastaan arvosanoja, kunnes
+arvosanojen syöttö lopetetaan negatiivisella kokonaisluvulla. Lopuksi ohjelma tulostaa
+arvosanojen lukumäärän sekä lasketun keskiarvon. */
+
+#include <iostream>
+#include <windows.h>
+#pragma execution_character_set( "utf-8" )
+
+using namespace std;
+
+
+
+int main(void)
+
+{
+    SetConsoleOutputCP(65001);
+
+    int summa = 0, luku, lukumaara = 0;
+    double ka;
+
+    cout << "Ohjelma laskee syotettyjen arvosanojen keskiarvon." << endl;
+    cout << "Lukujen syöttämisen lopetus negatiivisella luvulla." << endl;
+
+    do
+    {
+        cout << "Anna arvosana (1-5)";
+        cin >> luku;
+
+        if (luku >= 1 && luku <= 5)
+        {
+            lukumaara++;
+            summa = summa + luku;
+        }
+
+    } while (luku >= 0);
+
+    ka = (double)summa / lukumaara;
+
+    cout << "Ohjelmaan syötetty " << lukumaara << " arvosanaa." << endl;
+    cout << "Arvosanojen keskiarvo:" << ka << endl;
+
+    return 0;
+}
