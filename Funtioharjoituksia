@@ -1,0 +1,21 @@
+/*
+ Author: Tiia Riikonen
+ Date: 4.4.2022
+ Comments: Funktion käyttöä
+ */
+#include <iostream>
+using namespace std;
+
+void ask_name(string& name) {
+    do {
+        cout << "Anna nimesi : ";  // kysytään käyttäjältä nimeä
+        cin >> name;
+    } while (name.length() < 4); // Kysytään uudelleen kunnes pituus vähintään 4 merkkiä
+}
+
+
+int main()
+{
+    string name;
+    ask_name(name); //kutsutaan ask_name funktiota
+}
